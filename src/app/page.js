@@ -198,6 +198,24 @@ export default function Home() {
             </Link>
           </div>
 
+          {/* Dosen Pengampu */}
+          <div className="mb-4">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold animate-pulse"
+              style={{
+                background: "linear-gradient(135deg, #feca57, #ff6b6b, #ff9ff3, #54a0ff, #48dbfb)",
+                color: "#1a1a2e",
+                boxShadow: "0 0 20px rgba(254, 202, 87, 0.5), 0 0 40px rgba(255, 107, 107, 0.3)",
+              }}
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path d="M12 14l6.16-3.422A12.083 12.083 0 0119.5 15.5C19.5 18.537 16.142 21 12 21s-7.5-2.463-7.5-5.5c0-1.03.37-2.016 1.04-2.86L12 14z" />
+              </svg>
+              Dosen Pengampu: Wawan Kurniawan, S.Kom, M.Kom
+            </div>
+          </div>
+
           {/* Stats cards */}
           <div className="grid grid-cols-3 gap-3 max-w-md">
             <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 text-center border border-white/10">
