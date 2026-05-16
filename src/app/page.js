@@ -169,7 +169,7 @@ export default function Home() {
           {/* Top bar: logo + add button */}
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-1.5">
+              <div className="bg-white/15 backdrop-blur-sm rounded-lg p-1.5 border border-white/10">
                 <Image
                   src="/logo-undira.png"
                   alt="Logo UNDIRA"
@@ -182,14 +182,14 @@ export default function Home() {
                 <h1 className="text-xl sm:text-2xl font-bold text-white">
                   Smart Task Manager
                 </h1>
-                <p className="text-white/60 text-xs sm:text-sm">
+                <p className="text-white/70 text-xs sm:text-sm">
                   Kelola tugas harianmu dengan cerdas
                 </p>
               </div>
             </div>
             <Link
               href="/add"
-              className="hidden sm:flex btn-gradient text-white rounded-xl px-5 py-2.5 items-center gap-2 text-sm font-semibold"
+              className="hidden sm:flex bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/20 text-white rounded-lg px-5 py-2.5 items-center gap-2 text-sm font-semibold"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path d="M12 4v16m8-8H4" />
@@ -218,17 +218,17 @@ export default function Home() {
 
           {/* Stats cards */}
           <div className="grid grid-cols-3 gap-3 max-w-md">
-            <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 text-center border border-white/10">
+            <div className="bg-white/12 backdrop-blur-sm rounded-xl px-4 py-3 text-center border border-white/15">
               <p className="text-2xl font-bold text-white">{taskCounts.total}</p>
-              <p className="text-xs text-white/60 mt-0.5">Total Tugas</p>
+              <p className="text-xs text-white/70 mt-0.5">Total Tugas</p>
             </div>
-            <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 text-center border border-white/10">
+            <div className="bg-white/12 backdrop-blur-sm rounded-xl px-4 py-3 text-center border border-white/15">
               <p className="text-2xl font-bold text-white">{taskCounts.active}</p>
-              <p className="text-xs text-white/60 mt-0.5">Aktif</p>
+              <p className="text-xs text-white/70 mt-0.5">Aktif</p>
             </div>
-            <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 text-center border border-white/10">
+            <div className="bg-white/12 backdrop-blur-sm rounded-xl px-4 py-3 text-center border border-white/15">
               <p className="text-2xl font-bold text-white">{taskCounts.completed}</p>
-              <p className="text-xs text-white/60 mt-0.5">Selesai</p>
+              <p className="text-xs text-white/70 mt-0.5">Selesai</p>
             </div>
           </div>
         </div>
