@@ -323,7 +323,7 @@ export default function Home() {
       </Link>
 
       {/* Footer */}
-      <footer className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-6 mt-4">
+      <footer className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 pb-24 sm:pb-8 mt-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-border pt-6">
           <div className="flex items-center gap-2">
             <Image
@@ -341,6 +341,22 @@ export default function Home() {
           <p className="text-xs text-text-secondary">
             Smart Task Manager v1.0
           </p>
+        </div>
+        {/* Credit */}
+        <div className="mt-4 text-center">
+          <div
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold"
+            style={{
+              background: "linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff)",
+              color: "#1a1a2e",
+              boxShadow: "0 4px 15px rgba(255, 107, 107, 0.3), 0 4px 15px rgba(84, 160, 255, 0.3)",
+            }}
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+            Dibuat oleh Raymond — 411231060
+          </div>
         </div>
       </footer>
     </div>
