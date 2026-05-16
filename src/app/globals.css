@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f5f7;
+  --foreground: #1a1a2e;
+  --primary: #5b5ea6;
+  --primary-light: #8587ce;
+  --primary-dark: #3d3f7a;
+  --accent: #e8e8f0;
+  --card: #ffffff;
+  --danger: #e74c3c;
+  --danger-light: #fdecea;
+  --warning: #f39c12;
+  --warning-light: #fef9e7;
+  --success: #27ae60;
+  --success-light: #eafaf1;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-danger: var(--danger);
+  --color-danger-light: var(--danger-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Priority badge styles */
+.priority-high {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.priority-medium {
+  background: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.priority-low {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+/* Deadline indicator bar */
+.deadline-red {
+  border-left: 4px solid var(--danger);
+}
+
+.deadline-yellow {
+  border-left: 4px solid var(--warning);
+}
+
+.deadline-green {
+  border-left: 4px solid var(--success);
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+  transition-property: background-color, border-color, color, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: -1px;
+  border-color: var(--primary);
 }
